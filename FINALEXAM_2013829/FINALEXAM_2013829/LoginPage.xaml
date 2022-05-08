@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FINALEXAM_2013829.LoginPage"
+             Title="Welcome">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            x:Name="btnSignUp"
+            Clicked="btnSignUp_Clicked"
+            Text="Sign Up" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Margin="30">
+            <Label
+                FontAttributes="Bold"
+                FontSize="Large"
+                HorizontalOptions="Center"
+                Text="LOGIN"
+                TextColor="Black" />
+
+            <Label
+                Margin="20"
+                FontSize="Large"
+                HeightRequest="150"
+                HorizontalTextAlignment="Center"
+                MaxLines="2"
+                Text="Students Management System"
+                WidthRequest="200" />
+
+            <Label Text="Login" />
+
+            <Entry
+                x:Name="edtLogin"
+                Placeholder="Enter your email address"
+                TextChanged="entry_TextChanged" />
+
+            <Label Margin="0,20,0,0" Text="Password" />
+            <Entry
+                x:Name="edtPassword"
+                IsPassword="True"
+                Placeholder="Your Password"
+                TextChanged="entry_TextChanged" />
+
+            <Label
+                x:Name="lblMessage"
+                Margin="0,20"
+                HorizontalTextAlignment="Center"
+                Text=""
+                TextColor="Red" />
+
+            <Button
+                x:Name="btnLogin"
+                Margin="0,20,0,0"
+                BackgroundColor="CadetBlue"
+                Clicked="btnLogin_Clicked"
+                Text="LOGIN"
+                TextColor="White" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

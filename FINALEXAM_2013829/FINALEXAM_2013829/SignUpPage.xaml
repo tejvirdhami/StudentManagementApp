@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FINALEXAM_2013829.SignUpPage"
+             Title="Sign Up">
+
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <Label
+                FontAttributes="Bold"
+                FontSize="Large"
+                HorizontalOptions="Center"
+                Text="SIGN UP"
+                TextColor="Black" />
+            <Label Margin="0,20,0,0" Text="Login" />
+            <Entry
+                x:Name="edtEmailAddress"
+                Placeholder="Enter your email address"
+                TextChanged="entry_TextChanged" />
+
+            <StackLayout
+                Grid.Row="1"
+                Margin="0,20,0,0"
+                Orientation="Horizontal"
+                Spacing="20">
+                <Label HorizontalOptions="StartAndExpand" Text="First name" />
+                <Label HorizontalOptions="StartAndExpand" Text="Last name" />
+            </StackLayout>
+
+            <StackLayout
+                Grid.Row="1"
+                Orientation="Horizontal"
+                Spacing="20">
+                <Entry
+                    x:Name="edtFirstName"
+                    Placeholder="Enter your first name"
+                    TextChanged="entry_TextChanged"
+                    TextTransform="Uppercase" />
+                <Entry
+                    x:Name="edtLastName"
+                    Placeholder="Enter your last name"
+                    TextChanged="entry_TextChanged"
+                    TextTransform="Uppercase" />
+            </StackLayout>
+
+            <StackLayout
+                Grid.Row="1"
+                Margin="0,20,0,0"
+                Orientation="Horizontal"
+                Spacing="55">
+                <Label HorizontalOptions="StartAndExpand" Text="Password" />
+                <Label HorizontalOptions="StartAndExpand" Text="Password check" />
+            </StackLayout>
+
+            <StackLayout
+                Grid.Row="1"
+                Orientation="Horizontal"
+                Spacing="20">
+                <Entry
+                    x:Name="edtPassword"
+                    IsPassword="True"
+                    Placeholder="Enter password"
+                    TextChanged="entry_TextChanged" />
+                <Entry
+                    x:Name="edtPasswordCheck"
+                    IsPassword="True"
+                    Placeholder="Re Enter password"
+                    TextChanged="entry_TextChanged" />
+            </StackLayout>
+
+            <Label
+                x:Name="lblMessage"
+                Margin="0,20"
+                HorizontalTextAlignment="Center"
+                Text=""
+                TextColor="Red" />
+
+            <Button
+                x:Name="btnSignUp"
+                Margin="0,60,0,0"
+                BackgroundColor="CadetBlue"
+                Clicked="btnSignUp_Clicked"
+                Text="SIGN UP"
+                TextColor="White" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

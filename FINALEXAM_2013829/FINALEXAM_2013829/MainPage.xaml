@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FINALEXAM_2013829.MainPage"
+             Title="Student App">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="OnLogOff_Clicked" Text="LogOff" />
+        <ToolbarItem Clicked="OnAddNewStudent_Clicked" Text="Add" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ListView
+            x:Name="listView"
+            ItemSelected="listView_ItemSelected"
+            RowHeight="60">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid ColumnSpacing="0" RowSpacing="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.9*" />
+                                <ColumnDefinition Width="0.1*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label
+                                Margin="10,0,0,0"
+                                Text="{Binding LastName}"
+                                TextColor="Black"
+                                TextTransform="Uppercase"
+                                VerticalTextAlignment="End" />
+
+                            <Label
+                                Grid.Row="1"
+                                Margin="10,0,0,0"
+                                Text="{Binding FirstName}"
+                                TextColor="Red"
+                                TextTransform="Uppercase"
+                                VerticalTextAlignment="Start" />
+
+                            <Label
+                                HorizontalOptions="End"
+                                Text="{Binding Uid}"
+                                TextColor="Gray"
+                                VerticalTextAlignment="End" />
+                            <Label
+                                Grid.Row="1"
+                                HorizontalOptions="EndAndExpand"
+                                Text="{Binding Age}"
+                                TextColor="Blue" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

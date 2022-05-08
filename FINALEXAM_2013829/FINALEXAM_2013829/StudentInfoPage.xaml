@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FINALEXAM_2013829.StudentInfoPage"
+             Title="Student Info">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="OnSave_Clicked" Text="Save" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+
+        <StackLayout Margin="20">
+
+            <StackLayout x:Name="idLabels">
+                <Label Text="Id" />
+                <Label
+                    x:Name="lblId"
+                    FontAttributes="Bold"
+                    Text="undefined" />
+            </StackLayout>
+            <StackLayout
+                Grid.Row="1"
+                Margin="0,20,0,0"
+                Orientation="Horizontal"
+                Spacing="20">
+                <Label HorizontalOptions="StartAndExpand" Text="First name" />
+                <Label HorizontalOptions="StartAndExpand" Text="Last name" />
+            </StackLayout>
+
+            <StackLayout
+                Grid.Row="1"
+                Orientation="Horizontal"
+                Spacing="20">
+                <Entry
+                    x:Name="edtFirstName"
+                    Placeholder="Enter your first name"
+                    TextTransform="Uppercase"
+                    TextChanged="entry_TextChanged" />
+                <Entry
+                    x:Name="edtLastName"
+                    Placeholder="Enter your last name"
+                    TextTransform="Uppercase"
+                    TextChanged="entry_TextChanged" />
+            </StackLayout>
+            <Label Text="Age" />
+            <Entry x:Name="edtAge" Placeholder="Enter your age" TextChanged="entry_TextChanged" />
+
+            <Label
+                x:Name="lblMessage"
+                Margin="0,20"
+                HorizontalTextAlignment="Center"
+                Text=""
+                TextColor="Red" />
+            <Button
+                x:Name="btnDelete"
+                Margin="0,60,0,0"
+                BackgroundColor="Red"
+                Clicked="btnDelete_Clicked"
+                Text="DELETE"
+                TextColor="White" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
